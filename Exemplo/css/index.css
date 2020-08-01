@@ -2,34 +2,3 @@ footer{
     display: flex; 
     justify-content: center;
 }
-
-.topNav {
-    display: flex; 
-    justify-content: center;
-}
-
-.topNav a {
-    float: left;
-    display: block;
-    padding: 15px 15px;
-    color: black;
-    font-size: 20px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.topNav a:hover {
-    background-color: gray;
-    color: black;
-}
-
-.searchBar{
-    text-align:center;
-}
-
-#search{
-    width: 1000px;
-    height: 200px;
-    text-align:center;
-    font-size: 25px;
-}
