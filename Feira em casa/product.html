@@ -39,27 +39,35 @@
         </nav>
     </header>
 
-    <div class="product_container">
-        <h1 class="product_name">Nome do produto (+ unidade de medida)</h1>
+    <div class="container text-center">
+        <h1 class="product_name space">Nome do produto (+ unidade de medida)</h1>
 
-        <div class="product_specs">
-            <img class="product_img" src="img/test.png" alt="Imagem do produto">
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="product_img" src="img/test.png" alt="Imagem do produto">
+            </div>
 
             <!--max = quantidade do produto disponível-->
 
-            <div class="product_buy">
+            <div class="col-sm-9 space">
                 <div class="product_selection">
-                    <label for="nome">Quantidade desejada:</label>
-                    <input id="rangeInput" type="range" min="1" max="50" value="1" list="tickmarks" oninput="output.value = rangeInput.value">
 
-                    <datalist id="tickmarks">
-                        <option value="1" label="1">
-                        <option value="50" label="50">
-                    </datalist>
-                    <output id="output" for="rangeInput">1</output>
-                </div>
+                    <form class="form-inline justify-content-center space">
+                        <div class="form-vertical">
+                            <label for="product_unit">Quantidade desejada:</label>
+                            <input type="text" class="form-inline" id="product_unit">
+                        </div>
+
+                        <!--<div class="form-group">
+                          <label for="formControlRange">Quantidade desejada:</label>
+                          
+                          <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
+                          <output id="output" for="rangeInput">1</output>
+                        </div>-->
+                    </form>
                 
-            <button class="btn_buy" type="button">Comprar!</button>
+                    <button type="button" class="btn btn-success">Comprar!</button>
+                </div>
             </div>
         </div>
     </div>

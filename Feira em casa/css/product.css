@@ -1,38 +1,15 @@
-.product_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 34px;
-    margin: 20px 20px 20px 20px;
-    max-width: 1200px;
-    width: 85%; 
-    height: auto;
-    background-color: cadetblue;
-}
-
-.product_name{
-    margin-bottom: 40px;
-    background-color: white;
-}
-
-.product_specs{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
-    background-color: white;
+.space{
+    margin-bottom: 60px;
 }
 
 .product_img{
-    width: 30%
-}
-
-.product_buy{
-    width: 60%;
-    margin-bottom: 60px;
+    width: 100%
 }
 
 .btn_buy{
     margin-top: 60px;
+}
+
+.output{
+    justify-content: center;
 }
