@@ -17,10 +17,3 @@ div {
     column-gap: 40px;
     row-gap: 30px;
 }
-
-@media only screen and (max-width: 768px) {
-    /* For mobile phones: */
-    .col {
-      width: 100%;
-    }
-  }

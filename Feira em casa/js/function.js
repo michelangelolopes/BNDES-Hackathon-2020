@@ -14,3 +14,8 @@ function getData() {
     obj = JSON.parse(text);
     document.getElementById("demo").innerHTML = obj.name;
 }
+
+function test()
+{
+    document.write("#fé");
+}
