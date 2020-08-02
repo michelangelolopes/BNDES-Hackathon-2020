@@ -1,68 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <title>Login - TOP FEIRA  </title>
+    <title>Feira em casa</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="imagens/logo-icon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/landing-page.css">
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/form-jquery.js"></script>
-    <script src="js/login-unit.js"></script>
-    <script src="js/pop-up.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!--<script src="js/functions.js"></script>-->
 </head>
 <body>
-<div class="first-box">
-    <img class="logo-mobile" src="imagens/Unit-logo2.png" alt="Unit logo">
-    <div class="box-content">
-        <div class="content-info">
-          
-            <h1> O desafio do Comercio no Isolamento !</h1>
-            <p> <em></em></p>
-            <br>
-            <ul>
-                <li>BREVE ALGUMAS INFORMAÇÕES </li>
-                <li></li>
-                <li></li>
-            </ul>
-            <!--
-
-            -->
-           
+    <div class="d-flex flex-column align-items-center m-350">
+        <div class="p-2">
+            <h1 class="text-format">Feira em casa</h1>
         </div>
-        <div class="content-forms">
-            <form id="login" action="index.html" method="post" onsubmit="return validarLogin()">
-                <h2>Fazer Login</h2>
-                <p>Email Usuário:<span id="logEmail-erro"></span><br><input type="email"  placeholder="EX: seulogin@email.com" id="logEmail"></p>
-                <p>Senha:<span id="logSenha-erro"></span><br><input type="password" id="logSenha"></p>
-                <p class="btn-link"><button type="submit" id="entrar">Entrar</button><a id="go-cadastro" onclick="trocarOn();" href="#go-login">Cadastre-se</a></p>
-            </form>
 
-            <form id="cadastro" action="trocarOff();" method="post" onsubmit="return validarCadastro()">
-                <h2>Criar conta no Top Feira</h2>
-                <p>Nome:<span id="cadNome-erro"></span><br><input type="text" id="cadNome"></p>
-                <p>Curso:<span id="cadCurso-erro"></span><br><input type="text" id="cadCurso"></p>
-                <hr>
-                <p>Email :<span id="cadEmail-erro"></span><br><input type="email" placeholder="seulogin@email.com" id="cadEmail"></p>
-                <p>Senha:<span id="cadSenha-erro"></span><br><input type="password" id="cadSenha"></p>
-                <p class="btn-link"><button type="submit" id="cadastrar">Cadastrar</button><a id="go-login" onclick="trocarOff();" href="#">Possui uma conta?</a></p>
-            </form>   
-        </div>    
-    </div>
-    
-    <div id="popup" class="popup">
-        <p id="inner-popup"></p>
-        <button class="btn-action" onclick="fecharPopUp()">Fechar</button>
-    </div>
-    
-    <footer>
-        <p class="box-footer">
-            BSI 2019.1 · Projeto Comercio no Isolamento<br><a href="sobre.html">© 2020 BNDS</a>
-        </p>
-    </footer> 
-</div>  
+        <div class="p-2">
+            <a class="btn btn btn-primary btn-lg" href="management.html">Venda Já!</a>
+            <a class="btn btn-success btn-lg" href="product.html">Compre Já!</a>
+            <!--<button type="button" class="btn btn-success" onclick="setData()">Teste</button> -->
+        </div>
 
+        <div class="row-center p-3 my-3 bg-white-transparent">
+            <p class="text-center">Alguma coisa</p>
+        </div>
+    </div>
 </body>
 </html>
