@@ -1,9 +1,10 @@
 .space{
+    margin-top: 30px;
     margin-bottom: 60px;
 }
 
 .product_img{
-    width: 100%
+    width: 30%
 }
 
 .btn_buy{
@@ -12,4 +13,8 @@
 
 .output{
     justify-content: center;
+}
+
+.container{
+    background-image: url("img/madeira.jpg");
 }

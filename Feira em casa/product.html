@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/product.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="js/function.js"></script>
 </head>
-<body>
+<body >
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">
@@ -40,36 +42,12 @@
     </header>
 
     <div class="container text-center">
-        <h1 class="product_name space">Nome do produto (+ unidade de medida)</h1>
-
-        <div class="row">
-            <div class="col-sm-3">
-                <img class="product_img" src="img/test.png" alt="Imagem do produto">
-            </div>
-
-            <!--max = quantidade do produto disponível-->
-
-            <div class="col-sm-9 space">
-                <div class="product_selection">
-
-                    <form class="form-inline justify-content-center space">
-                        <div class="form-vertical">
-                            <label for="product_unit">Quantidade desejada:</label>
-                            <input type="text" class="form-inline" id="product_unit">
-                        </div>
-
-                        <!--<div class="form-group">
-                          <label for="formControlRange">Quantidade desejada:</label>
-                          
-                          <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
-                          <output id="output" for="rangeInput">1</output>
-                        </div>-->
-                    </form>
-                
-                    <button type="button" class="btn btn-success">Comprar!</button>
-                </div>
-            </div>
-        </div>
+        <script>
+            var a = 1;
+            for(var i = 0; i < 4; i++){
+                document.write(String.raw `<h1 class="product_name space">Nome do produto (+ unidade de medida)</h1> <div class="row"> <div class="col-sm-3"> <img class="product_img" src="img/test.png" alt="Imagem do produto"> </div> <div class="col-sm-9 spacedown"> <div class="product_selection"> <form class="form-inline justify-content-center space"> <div class="form-vertical"> <label for="product_unit">Quantidade desejada:</label> <input type="text" class="form-inline" id="product_unit"> </div> </form> <button type="button" class="btn btn-success" onclick="getData">Comprar!</button> </div> </div> </div>`);
+            }
+        </script>
     </div>
 </body>
 </html>
