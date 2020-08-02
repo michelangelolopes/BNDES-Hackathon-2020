@@ -31,3 +31,24 @@
     <output id="output" for="formControlRange">1</output>
     <p>Quantidade disponível: x</p>
 </div>
+
+                        <script>
+                            document.getElementById("user_name").addEventListener("keypress", addUser());
+                            function addUser(e){
+                                if (e.keyCode == 13 || e.which == 13) {
+                                    var getUser = document.getElementById("user_name");
+                                    var name = eval(getUser.value);
+                                    
+                                        
+                                    let user = [];
+
+                                    user.push({nome: name, especialidade: "frutas", local: "praça seca"});
+
+                                    console.log(JSON.stringify(user));
+
+                                    return false;
+                                }
+                            }
+                        </script>
+
+                        onkeypress="return addUser(event)"

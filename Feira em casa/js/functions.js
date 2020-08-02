@@ -19,3 +19,19 @@ function test()
 {
     document.write("#fé");
 }
+
+function addUser(e){
+    if (e.keyCode == 13 || e.which == 13) {
+        var getUser = document.getElementById("user_name");
+        var name = eval(getUser.value);
+        
+            
+        let user = [];
+
+        user.push({nome: name, especialidade: "frutas", local: "praça seca"});
+
+        console.log(JSON.stringify(user));
+
+        return false;
+    }
+}

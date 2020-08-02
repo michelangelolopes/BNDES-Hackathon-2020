@@ -5,22 +5,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="imagem/png" href="/img/icon.png">
+    <link rel="icon" type="imagem/png" href="img/icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="js/functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--<script>
+        $(document).ready(function(){
+            $('#user_name').keypress(function(event){
+                var keycode = (event.keyCode ? event.keyCode : event.which);
+                if(keycode == '13'){
+                    //var getUser = document.getElementById("user_name");
+                    var name = $('#user_name').value;
+                    console.log(name);
+                        
+                    //let user = [];
+
+                    //user.push({nome: name, especialidade: "frutas", local: "praça seca"});
+
+                    //console.log(JSON.stringify(user));
+                }
+            })
+        });
+    </script>-->
 </head>
 <body>
     <h1 class="text-format text-center">Barraca de venda</h1>
     <div class="container p-3 my-3 bg-white-transparent">
         <div class="row p-3 my-3">
             <div class="col-xs-12 col-lg-12">
-                <form class="form-inline justify-content-center">
+                <form class="form-inline justify-content-center" onsubmit="event.preventDefault();">
                     <div class="form-vertical">
                         <p>Seguindo o seguinte formato: nome/apelido + especialidade de venda + local da feira onde atua</p>
                         <p>Exemplo: seu zé frutas praça seca</p>
-                        <label for="product_unit">Digite seu nome de feirante:</label>
-                        <input type="text" class="form-inline text-center" id="product_unit">
+                        <label for="user_name">Digite seu nome de feirante:</label>
+                        <input type="text" class="form-inline text-center" id="user_name" onkeypress="addUser(event)">
+
+                        <script>
+                            function addUser(e){
+                                if (e.keyCode == 13 || e.which == 13) {
+                                    
+                                    let getUser = document.getElementById("user_name");
+                                    let users_str = localStorage.getItem("users");
+
+                                    if(users_str == null)
+                                    {
+                                        let user = [];
+                                        user.push(getUser.value);
+                                        //console.log(user, users_count);
+
+                                        localStorage.setItem("users", JSON.stringify(user));
+                                        localStorage.setItem("user_index", JSON.stringify(1));
+                                    }
+                                    else
+                                    {
+                                        let users = JSON.parse(users_str);
+                                        let index = 0;
+                                        let users_count; = user.length;
+                                        
+                                        for(var i = 0; i < users_count; i++)
+                                        {
+                                            if(getUser.value == users[i])
+                                            {
+                                                index 
+                                            }
+                                        }
+
+                                    }
+
+                                    var a = 1;
+                                    //var name = eval(getUser.value);
+
+                                    //console.log(text);
+                                    
+                                        
+                                    let obj, texto;
+                                    
+                                    user.push({nome: "teste", especialidade: "frutas", local: "praça seca"});
+
+                                    texto = JSON.stringify(user);
+                                    obj = JSON.parse(texto);
+
+                                    //console.log(obj[0].nome)
+                                    //console.log(texto);
+
+
+                                    getUser.disabled = true;
+                                }
+                            }
+                        </script>
                     </div>
                 </form>
 
