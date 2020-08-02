@@ -21,7 +21,7 @@
                         <p>Seguindo o seguinte formato: nome/apelido + especialidade de venda + local da feira onde atua</p>
                         <p>Exemplo: seu zé frutas praça seca</p>
                         <label for="user_name">Digite seu nome de feirante:</label>
-                        <input type="text" class="form-inline text-center" id="user_name" onkeypress="addUser(event)">
+                        <input type="text" class="form-inline text-center" id="user_name" onkeypress="addUser(event)" ondblclick="enableInput()">
                     </div>
                 </form>
                 <div id="products"></div>
@@ -32,14 +32,16 @@
                     3 - 
                 -->
 
-                <button type="button" class="btn btn-outline-dark" onclick="getData()">Adicionar produto</button> 
+                <button type="button" class="btn btn-outline-dark" onclick="createFormProduct()">Adicionar produto</button> 
                 <!--<button type="button" class="btn btn-outline-dark" onclick="getData()">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"/>
                   </svg> produto
                 </button> -->
-                <button type="button" class="btn btn-outline-success" onclick="storeProductsData()">Confirmar</button> 
+                <button type="button" class="btn btn-outline-success" onclick="storeDataProduct()">Confirmar</button> 
             </div>
+
+
 
         </div>
     </div>

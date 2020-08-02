@@ -43,6 +43,12 @@ function getLocalData(str){
     return real_value;
 }
 
+function enableInput()
+{
+    let getUser = document.getElementById("user_name");
+    getUser.disabled = false;
+}
+
 function addUser(e)
 {
     if (e.keyCode == 13 || e.which == 13) 
@@ -139,4 +145,9 @@ function products_write(user_index)
 
         document.getElementById("products").innerHTML = "<h3>Produtos cadastrados:</h3>" + str_result
     }
+}
+
+function createFormProduct()
+{
+
 }
