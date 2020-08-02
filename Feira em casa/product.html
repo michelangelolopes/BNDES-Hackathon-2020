@@ -1,37 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <title>Nome do produto</title>
+    <title>Cesta de Compras</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" type="imagem/png" href="/img/icon.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="js/function.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="b">
-            <h5 class="product_name space text-format">Nome do produto (+ unidade de medida)</h5> 
-        </div>
-
-        <div class="a">
-                <!--<form class="form-inline"> 
-                    <div class="form-vertical"> 
-                        <label for="product_unit" class="text-format">Quantidade desejada:</label> 
-                        <input type="text" class="form-inline" id="product_unit"> 
-                    </div> 
-                </form>-->
-
-                <div class="form-group">
-                    <label for="formControlRange" class="text-format">Quantidade desejada:</label>
-                    
-                    <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
-                    <output id="output" for="formControlRange" class="text-format">1</output>
+        <h1 class="text-format text-center">Cesta de compras</h1>
+        <div class="row p-3 my-3">
+            <div class="col-xs-12 col-lg-3 p-3 my-3 bg-white-transparent">
+                <div class="b">
+                    <h5 class="product_name">Nome do produto</h5> 
                 </div>
-                
-                <button type="button" class="btn btn-success" onclick="getData()">Comprar!</button> 
-                <p id="demo"></p>
+        
+                <div class="c">
+                    <h6 class="product_name">Preço / unidade de medida</h6> 
+                </div>
+        
+                <div class="d">
+                    <h6>Nome do feirante</h6>
+                </div>
+        
+                <div class="a">                        
+                        <form>
+                            <div class="form-group">
+                                <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
+                                <label for="formControlRange">Quantidade desejada:</label>
+                                <output id="output">1</output>
+                            </div>
+                        </form>
+
+                        <button type="button" class="btn btn-success" onclick="getData()">Comprar!</button> 
+                        <p id="demo"></p>
+                </div>
+            </div>
+            
         </div>
     </div>
 </body>

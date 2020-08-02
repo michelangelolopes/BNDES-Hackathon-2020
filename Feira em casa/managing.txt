@@ -1,0 +1,33 @@
+<div class="container text-center"> <h1 class="product_name space">Nome do produto (+ unidade de medida)</h1> <div class="row"> <div class="col-sm-3"> <img class="product_img" src="img/test.png" alt="Imagem do produto"> </div> <div class="col-sm-9 spacedown"> <div class="product_selection"> <form class="form-inline justify-content-center space"> <div class="form-vertical"> <label for="product_unit">Quantidade desejada:</label> <input type="text" class="form-inline" id="product_unit"> </div> </form> <button type="button" class="btn btn-success">Comprar!</button> </div> </div> </div> </div>
+
+                        <!--<div class="form-group">
+                          <label for="formControlRange">Quantidade desejada:</label>
+                          
+                          <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
+                          <output id="output" for="rangeInput">1</output>
+                        </div>-->
+
+                            <div class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title">Observações de compra:</h4>
+            </div>
+            <div class="modal-body">
+              <p>O pagamento de suas compras será realizado diretamente com os feirantes correspondentes.</p>
+              <p>Eles, então, nos seus dias pré-determinados de serviço (os mesmos da época pré-pandemia) farão a entrega na sua casa.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+<div class="form-group">
+    <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
+    <label for="formControlRange">Quantidade desejada:</label>
+    <output id="output" for="formControlRange">1</output>
+    <p>Quantidade disponível: x</p>
+</div>
