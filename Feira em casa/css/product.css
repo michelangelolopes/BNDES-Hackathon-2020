@@ -1,20 +1,10 @@
-.space{
-    margin-top: 30px;
-    margin-bottom: 60px;
+body{
+    background-image: url("../img/feira.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-.product_img{
-    width: 30%
-}
-
-.btn_buy{
-    margin-top: 60px;
-}
-
-.output{
-    justify-content: center;
-}
-
-.container{
-    background-image: url("img/madeira.jpg");
+.text-format{
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+    color: white;
 }

@@ -9,45 +9,30 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="js/function.js"></script>
 </head>
-<body >
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <!--<svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-basket-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M5.071 1.243a.5.5 0 0 1 .858.514L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v5a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 6h1.717L5.07 1.243zM3.5 10.5a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3zm2.5 0a.5.5 0 0 0-1 0v3a.5.5 0 0 0 1 0v-3z"/>
-                </svg>-->
-            </a>
+<body>
+    <div class="container">
+        <div class="b">
+            <h5 class="product_name space text-format">Nome do produto (+ unidade de medida)</h5> 
+        </div>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Início <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Venda já!</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Vendas realizadas</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Compras realizadas</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <div class="a">
+                <!--<form class="form-inline"> 
+                    <div class="form-vertical"> 
+                        <label for="product_unit" class="text-format">Quantidade desejada:</label> 
+                        <input type="text" class="form-inline" id="product_unit"> 
+                    </div> 
+                </form>-->
 
-    <div class="container text-center">
-        <script>
-            var a = 1;
-            for(var i = 0; i < 4; i++){
-                document.write(String.raw `<h1 class="product_name space">Nome do produto (+ unidade de medida)</h1> <div class="row"> <div class="col-sm-3"> <img class="product_img" src="img/test.png" alt="Imagem do produto"> </div> <div class="col-sm-9 spacedown"> <div class="product_selection"> <form class="form-inline justify-content-center space"> <div class="form-vertical"> <label for="product_unit">Quantidade desejada:</label> <input type="text" class="form-inline" id="product_unit"> </div> </form> <button type="button" class="btn btn-success" onclick="getData">Comprar!</button> </div> </div> </div>`);
-            }
-        </script>
+                <div class="form-group">
+                    <label for="formControlRange" class="text-format">Quantidade desejada:</label>
+                    
+                    <input type="range" class="form-control-range" id="formControlRange" min="1" max="50" value="1" list="tickmarks" oninput="output.value = formControlRange.value">
+                    <output id="output" for="formControlRange" class="text-format">1</output>
+                </div>
+                
+                <button type="button" class="btn btn-success" onclick="getData()">Comprar!</button> 
+                <p id="demo"></p>
+        </div>
     </div>
 </body>
 </html>
