@@ -1,0 +1,30 @@
+/*html { 
+    background: url("../img/feira.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}*/
+body{
+    background: url("../img/feira.jpg") no-repeat center center fixed; 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text-format{
+    text-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 25px black;
+    color: white;
+}
+
+.m-350{
+    margin-top: 250px;
+}
+
+.bg-white-transparent{
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+div {
+    column-gap: 40px;
+    row-gap: 30px;
+}

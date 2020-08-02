@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Barraca de venda</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="imagem/png" href="img/icon.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="js/functions.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 class="text-format text-center">Barraca de venda</h1>
+    <div class="container p-3 my-3 bg-white-transparent">
+        <div class="row p-3 my-3">
+            <div class="col-xs-12 col-lg-12">
+                <form class="form-inline justify-content-center" onsubmit="event.preventDefault();">
+                    <div class="form-vertical">
+                        <p>Seguindo o seguinte formato: nome/apelido + especialidade de venda + local da feira onde atua</p>
+                        <p>Exemplo: seu zé frutas praça seca</p>
+                        <label for="user_name">Digite seu nome de feirante:</label>
+                        <input type="text" class="form-inline text-center" id="user_name" onkeypress="addUser(event)" ondblclick="enableInput()">
+                    </div>
+                </form>
+                <div id="products"></div>
+
+                <!--
+                    1 - atribuir função de carregamento de lista de produtos cadastrados ao enter do input
+                    2 - possibilitar alteração, botão para tornar texto em caixa de diálogo
+                    3 - 
+                -->
+
+                <button type="button" class="btn btn-outline-dark" onclick="createFormProduct()">Adicionar produto</button> 
+                <!--<button type="button" class="btn btn-outline-dark" onclick="getData()">
+                    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"/>
+                  </svg> produto
+                </button> -->
+                <button type="button" class="btn btn-outline-success" onclick="storeDataProduct()">Confirmar</button> 
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+</html>
