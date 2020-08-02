@@ -10,24 +10,6 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="js/functions.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--<script>
-        $(document).ready(function(){
-            $('#user_name').keypress(function(event){
-                var keycode = (event.keyCode ? event.keyCode : event.which);
-                if(keycode == '13'){
-                    //var getUser = document.getElementById("user_name");
-                    var name = $('#user_name').value;
-                    console.log(name);
-                        
-                    //let user = [];
-
-                    //user.push({nome: name, especialidade: "frutas", local: "praça seca"});
-
-                    //console.log(JSON.stringify(user));
-                }
-            })
-        });
-    </script>-->
 </head>
 <body>
     <h1 class="text-format text-center">Barraca de venda</h1>
@@ -40,62 +22,9 @@
                         <p>Exemplo: seu zé frutas praça seca</p>
                         <label for="user_name">Digite seu nome de feirante:</label>
                         <input type="text" class="form-inline text-center" id="user_name" onkeypress="addUser(event)">
-
-                        <script>
-                            function addUser(e){
-                                if (e.keyCode == 13 || e.which == 13) {
-                                    
-                                    let getUser = document.getElementById("user_name");
-                                    let users_str = localStorage.getItem("users");
-
-                                    if(users_str == null)
-                                    {
-                                        let user = [];
-                                        user.push(getUser.value);
-                                        //console.log(user, users_count);
-
-                                        localStorage.setItem("users", JSON.stringify(user));
-                                        localStorage.setItem("user_index", JSON.stringify(1));
-                                    }
-                                    else
-                                    {
-                                        let users = JSON.parse(users_str);
-                                        let index = 0;
-                                        let users_count; = user.length;
-                                        
-                                        for(var i = 0; i < users_count; i++)
-                                        {
-                                            if(getUser.value == users[i])
-                                            {
-                                                index 
-                                            }
-                                        }
-
-                                    }
-
-                                    var a = 1;
-                                    //var name = eval(getUser.value);
-
-                                    //console.log(text);
-                                    
-                                        
-                                    let obj, texto;
-                                    
-                                    user.push({nome: "teste", especialidade: "frutas", local: "praça seca"});
-
-                                    texto = JSON.stringify(user);
-                                    obj = JSON.parse(texto);
-
-                                    //console.log(obj[0].nome)
-                                    //console.log(texto);
-
-
-                                    getUser.disabled = true;
-                                }
-                            }
-                        </script>
                     </div>
                 </form>
+                <div id="products"></div>
 
                 <!--
                     1 - atribuir função de carregamento de lista de produtos cadastrados ao enter do input
@@ -103,22 +32,13 @@
                     3 - 
                 -->
 
-                <div>
-                    <h3>Produtos cadastrados:</h3>
-
-                    <p>Nome do produto</p>
-                    <p>Unidade de medida</p>
-                    <p>Preço</p>
-                    <p>Quantidade disponível</p>
-                </div>
-
                 <button type="button" class="btn btn-outline-dark" onclick="getData()">Adicionar produto</button> 
-                <button type="button" class="btn btn-outline-dark" onclick="getData()">
+                <!--<button type="button" class="btn btn-outline-dark" onclick="getData()">
                     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-plus-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4a.5.5 0 0 0-1 0v3.5H4a.5.5 0 0 0 0 1h3.5V12a.5.5 0 0 0 1 0V8.5H12a.5.5 0 0 0 0-1H8.5V4z"/>
-                  </svg>
-                </button> 
-                <button type="button" class="btn btn-outline-success" onclick="getData()">Confirmar</button> 
+                  </svg> produto
+                </button> -->
+                <button type="button" class="btn btn-outline-success" onclick="storeProductsData()">Confirmar</button> 
             </div>
 
         </div>
