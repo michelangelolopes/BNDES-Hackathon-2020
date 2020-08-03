@@ -52,3 +52,5 @@
                         </script>
 
                         onkeypress="return addUser(event)"
+
+onclick="createFormProduct()"

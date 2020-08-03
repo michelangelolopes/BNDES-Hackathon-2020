@@ -20,22 +20,6 @@ function test()
     document.write("#fé");
 }
 
-function addUser(e){
-    if (e.keyCode == 13 || e.which == 13) {
-        var getUser = document.getElementById("user_name");
-        var name = eval(getUser.value);
-        
-            
-        let user = [];
-
-        user.push({nome: name, especialidade: "frutas", local: "praça seca"});
-
-        console.log(JSON.stringify(user));
-
-        return false;
-    }
-}
-
 function getLocalData(str){
     let str_value = localStorage.getItem(str);
     let real_value = JSON.parse(str_value);
@@ -57,6 +41,7 @@ function addUser(e)
         let users_str = localStorage.getItem("users");
         let user_index;
         getUser.disabled = true;
+        //document.getElementById("idAdd").innerHTML = `<button type="button" class="btn btn-outline-dark mt-2 ml-2" id="btnAdd" data-toggle="modal" data-target="#meuModal">Adicionar produto</button> `
 
         if(users_str == null)
         {
@@ -107,6 +92,7 @@ function addUser(e)
 
         /**/
 
+        //$("#btnAdd").show();
         products_write(user_index);
 
     }
@@ -130,10 +116,20 @@ function products_write(user_index)
 
         for(var i = 0; i < products_qtt; i++)
         {
-            product_str.push(`<p>Nome do produto: ${user_products[i].name} </p>
+            product_str.push(`
+                <div class="card" style="width: 18rem; margin-bottom: 20px;">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Nome do produto: ${user_products[i].name}</li>
+                        <li class="list-group-item">Unidade de medida: ${user_products[i].measure}</li>
+                        <li class="list-group-item">Preço: ${user_products[i].price}</li>
+                        <li class="list-group-item">Quantidade disponível: ${user_products[i].available}</li>
+                    </ul>
+                </div>
+            `)
+            /*product_str.push(`<p>Nome do produto: ${user_products[i].name} </p>
             <p>Unidade de medida: ${user_products[i].measure} </p>
             <p>Preço: ${user_products[i].price} </p>
-            <p>Quantidade disponível: ${user_products[i].available} </p>`)
+            <p>Quantidade disponível: ${user_products[i].available} </p>`)*/
         }
 
         let str_result = ""
@@ -145,9 +141,4 @@ function products_write(user_index)
 
         document.getElementById("products").innerHTML = "<h3>Produtos cadastrados:</h3>" + str_result
     }
-}
-
-function createFormProduct()
-{
-
 }
